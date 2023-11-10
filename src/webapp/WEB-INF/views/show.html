@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Information</title>
+</head>
+<body>
+<h1>User Information</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Year</th>
+    </tr>
+    <tr>
+        <td th:text="${users.id}"></td>
+        <td th:text="${users.name}"></td>
+        <td th:text="${users.year}"></td>
+    </tr>
+</table>
+<a th:href="@{/edit(id=${users.id})}">Edit User</a>
+
+<form method="GET" action="/delete">
+    <input type="hidden" name="id" th:value="${users.id}">
+    <button type="submit">Delete User</button>
+</form>
+</body>
