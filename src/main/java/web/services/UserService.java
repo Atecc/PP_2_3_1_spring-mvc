@@ -1,7 +1,9 @@
 package web.services;
 
+import org.springframework.transaction.annotation.Transactional;
 import web.model.User;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface UserService {
